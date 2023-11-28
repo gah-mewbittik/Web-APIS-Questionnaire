@@ -3,8 +3,7 @@ var mainEl = document.getElementById('main');
 var qContainEl = document.querySelector('.questionContainer');
 var buttonEl = document.getElementById('start-quiz');
 
-
-
+var questionOne = document.getElementById('questionOne');
 
 
 var downTick = 75;
@@ -54,22 +53,14 @@ function countdown() {
   
   
 
- buttonEl.addEventListener('click', function(event){
-  var element = event.target;
+ buttonEl.addEventListener('click', function(){
 
   countdown();
   
+  document.getElementById('initialQuestion').remove();
 
-  if(element.matches('.questionContainer')){
-       if(element.dataset.state === 'hidden'){
-         element.dataset.state = 'visible';
-         }else{
-           element.dataset.state = 'hidden';
-         }
-       
-      }
+  questionOne.style.display = 'flex';
   
-
  });
 
  
