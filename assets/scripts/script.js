@@ -56,8 +56,18 @@ var scoreSubmit = document.getElementById('scoreSubmit');
 //clearScore
 var clearScore = document.getElementById('clearScore');
 
+//clearScore buttons
+var goBackBtn = document.getElementById('goBackBtn');
+var clearHighScoreBtn = document.getElementById('clearHighScore');
 
+//clearAllHighScores
+var clearAllScores = document.getElementById('clearAllScores');
 
+//clearAllHighScores btn
+var goBackBtn_2 = document.getElementById('goBackBtn_2');
+var clearAllHighScoresBtn = document.getElementById('clearAllHighScores');
+
+//countdown start time
 var downTick = 75;
 
 var message = 'YOUR TIME IS UP!'
@@ -225,14 +235,32 @@ qFiveButton_4El.addEventListener('click', function(){
 });
 //Fifth question end
 
+//Scores & Clear Scores Buttons start
 scoreSubmit.addEventListener('click', function(){
   score.remove();
   clearScore.style.display = 'flex';
+});
+
+goBackBtn.addEventListener('click', function(){
+  clearScore.remove();
+  score.show(); ///fix this -----------------------------------<<<
+});
+
+clearHighScoreBtn.addEventListener('click', function(){
+  clearScore.remove();
+  clearAllScores.style.display = 'flex';
+});
+
+goBackBtn_2.addEventListener('click', function(){
+  clearAllScores.remove();
+  clearScore.append(); ///fix this -------------------------------<<<
+});
+
+clearAllHighScoresBtn.addEventListener('click', function(){
+  
+  //Add clearing of scores and save to local storage
+  clearAllScores.remove();
 })
-
-
-
-
 
 
 
