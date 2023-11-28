@@ -1,9 +1,61 @@
 var timerEl = document.getElementById('timerCount');
 var mainEl = document.getElementById('main');
 var qContainEl = document.querySelector('.questionContainer');
+//start-quiz button
 var buttonEl = document.getElementById('start-quiz');
 
 var questionOne = document.getElementById('questionOne');
+//questionOne buttons
+var qOneButton_1El = document.getElementById('qOneBtn_1');
+var qOneButton_2El = document.getElementById('qOneBtn_2');
+var qOneButton_3El = document.getElementById('qOneBtn_3');
+var qOneButton_4El = document.getElementById('qOneBtn_4');
+
+//questionTwo
+var questionTwo = document.getElementById('questionTwo');
+
+// question two buttons
+var qTwoButton_1El = document.getElementById('qTwoBtn_1');
+var qTwoButton_2El = document.getElementById('qTwoBtn_2');
+var qTwoButton_3El = document.getElementById('qTwoBtn_3');
+var qTwoButton_4El = document.getElementById('qTwoBtn_4');
+
+//questionThree
+var questionThree = document.getElementById('questionThree');
+
+//questionFour buttons
+var qThreeButton_1El = document.getElementById('qThreeBtn_1');
+var qThreeButton_2El = document.getElementById('qThreeBtn_2');
+var qThreeButton_3El = document.getElementById('qThreeBtn_3');
+var qThreeButton_4El = document.getElementById('qThreeBtn_4');
+
+//questionFour
+var questionFour = document.getElementById('questionFour');
+
+//question four buttons
+var qFourButton_1El = document.getElementById('qFourBtn_1');
+var qFourButton_2El = document.getElementById('qFourBtn_2');
+var qFourButton_3El = document.getElementById('qFourBtn_3');
+var qFourButton_4El = document.getElementById('qFourBtn_4');
+
+//questionFire
+var questionFive = document.getElementById('questionFive');
+
+//questionFive buttons
+var qFiveButton_1El = document.getElementById('qFiveBtn_1');
+var qFiveButton_2El = document.getElementById('qFiveBtn_2');
+var qFiveButton_3El = document.getElementById('qFiveBtn_3');
+var qFiveButton_4El = document.getElementById('qFiveBtn_4');
+
+//score
+var score = document.getElementById('score');
+
+//score button
+var scoreSubmit = document.getElementById('scoreSubmit');
+
+//clearScore
+var clearScore = document.getElementById('clearScore');
+
 
 
 var downTick = 75;
@@ -51,8 +103,7 @@ function countdown() {
     }, 1000);
   }
   
-  
-
+//initial question buttons;
  buttonEl.addEventListener('click', function(){
 
   countdown();
@@ -63,7 +114,129 @@ function countdown() {
   
  });
 
- 
+ //First question buttons start
+ qOneButton_1El.addEventListener('click', function(){
+  
+  questionOne.remove();
+  questionTwo.style.display = 'flex';
+ });
+
+ qOneButton_2El.addEventListener('click', function(){
+  
+  questionOne.remove();
+  questionTwo.style.display = 'flex';
+ });
+
+ qOneButton_3El.addEventListener('click', function(){
+  
+  questionOne.remove();
+  questionTwo.style.display = 'flex';
+ });
+
+ qOneButton_4El.addEventListener('click', function(){
+  
+  questionOne.remove();
+  questionTwo.style.display = 'flex';
+ });
+//First question buttons end
+
+//Second question buttons
+qTwoButton_1El.addEventListener('click', function(){
+  questionTwo.remove();
+  questionThree.style.display = 'flex';
+});
+
+qTwoButton_2El.addEventListener('click', function(){
+  questionTwo.remove();
+  questionThree.style.display = 'flex';
+});
+
+qTwoButton_3El.addEventListener('click', function(){
+  questionTwo.remove();
+  questionThree.style.display = 'flex';
+});
+
+qTwoButton_4El.addEventListener('click', function(){
+  questionTwo.remove();
+  questionThree.style.display = 'flex';
+});
+//Second question buttons end
+
+//Third question buttons start
+qThreeButton_1El.addEventListener('click', function(){
+  questionThree.remove();
+  questionFour.style.display = 'flex';
+});
+
+qThreeButton_2El.addEventListener('click', function(){
+  questionThree.remove();
+  questionFour.style.display = 'flex';
+});
+
+qThreeButton_3El.addEventListener('click', function(){
+  questionThree.remove();
+  questionFour.style.display = 'flex';
+});
+
+qThreeButton_4El.addEventListener('click', function(){
+  questionThree.remove();
+  questionFour.style.display = 'flex';
+});
+//Third question buttons end
+
+//Fourth question buttons start
+qFourButton_1El.addEventListener('click', function(){
+  questionFour.remove();
+  questionFive.style.display = 'flex';
+});
+qFourButton_2El.addEventListener('click', function(){
+  questionFour.remove();
+  questionFive.style.display = 'flex';
+});
+qFourButton_3El.addEventListener('click', function(){
+  questionFour.remove();
+  questionFive.style.display = 'flex';
+});
+qFourButton_4El.addEventListener('click', function(){
+  questionFour.remove();
+  questionFive.style.display = 'flex';
+});
+//Fourth question end
+
+//Fifth question start
+qFiveButton_1El.addEventListener('click', function(){
+  questionFive.remove();
+  score.style.display = 'flex';
+});
+
+qFiveButton_2El.addEventListener('click', function(){
+  questionFive.remove();
+  score.style.display = 'flex';
+});
+
+qFiveButton_3El.addEventListener('click', function(){
+  questionFive.remove();
+  score.style.display = 'flex';
+});
+
+qFiveButton_4El.addEventListener('click', function(){
+  questionFive.remove();
+  score.style.display = 'flex';
+});
+//Fifth question end
+
+scoreSubmit.addEventListener('click', function(){
+  score.remove();
+  clearScore.style.display = 'flex';
+})
+
+
+
+
+
+
+
+
 
 //  var container = document.querySelector(".container");
 
