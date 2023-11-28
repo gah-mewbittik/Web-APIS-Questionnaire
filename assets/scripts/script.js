@@ -1,6 +1,10 @@
 var timerEl = document.getElementById('timerCount');
-
 var mainEl = document.getElementById('main');
+var qContainEl = document.querySelector('.questionContainer');
+var buttonEl = document.getElementById('start-quiz');
+
+
+
 
 var downTick = 75;
 
@@ -47,4 +51,44 @@ function countdown() {
     }, 1000);
   }
   
+  
+
+ buttonEl.addEventListener('click', function(event){
+  var element = event.target;
+
   countdown();
+
+  if(element.matches('.questionContainer')){
+    
+    if(qContainEl.dataset.state === 'hidden'){
+      qContainEl.dataset.state = 'visible';
+      qContainEl.style.display = 'block';
+    }else{
+      qContainEl.dataset.state = 'hidden';
+      qContainEl.style.display = 'none';
+    }
+ }
+  
+
+ });
+
+//  var container = document.querySelector(".container");
+
+//  container.addEventListener("click", function(event) {
+//    var element = event.target;
+ 
+//    // TODO: Complete function
+//   if(element.matches('.box')){
+//    if(element.dataset.state === 'hidden'){
+//      var value = element.getAttribute('data-number');
+//      element.textContent = value;
+//      element.dataset.state = 'visible';
+//      }else{
+//        element.textContent = ' ';
+//        element.dataset.state = 'hidden';
+//      }
+   
+//   }
+ 
+ 
+//  });

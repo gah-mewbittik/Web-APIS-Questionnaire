@@ -14,63 +14,64 @@
       
     </div>
     <div id="main"></div>
-    <div class="questionContainer" data-state="visible">
+    <div class="questionContainer" id="initial-Question" data-state="visible">
       <h2>Coding Quiz Challenge</h2>
       <p>Try answer the following questions before the timer runs out. Keep in mind that incorrect answers will penalize your scoreline by ten seconds. </p>
-      <button>Start Quiz</button>
+      <button id="start-quiz">Start Quiz</button>
     </div>
-    <div class="questionContainer" data-state="'hidden">
+    <div class="questionContainer" id="'questionOne" data-state="hidden">
       <h2>Commonly used types DO NOT include:</h2>
       <button>1. strings</button>
       <button>2. booleans</button>
       <button>3. alerts</button>
       <button>4. numbers</button>
     </div>
-    <div class="questionContainer" data-state="'hidden">
+    <div class="questionContainer" id="questionTwo" data-state="hidden">
       <h2>The condition in an if/else statement is embedded within __________.</h2>
       <button>1. quotes</button>
       <button>2. curly brackets</button>
       <button>3. parenthesis</button>
       <button>4. square brackets</button>
     </div>
-    <div class="questionContainer" data-state="hidden">
+    <div class="questionContainer" id="questionThree" data-state="hidden">
       <h2>Arrays in JavaScript can be used to store:</h2>
       <button>1. numbers and strings</button>
       <button>2. other arrays</button>
       <button>3. booleans</button>
       <button>4. all the above</button>
     </div>
-    <div class="questionContainer" data-state="hidden">
+    <div class="questionContainer" id="questionFour" data-state="hidden">
       <h2>Strings must be enclosed within _____ when being assigned to variables</h2>
       <button>1. commas</button>
       <button>2. curly brackets</button>
       <button>3. quotes</button>
       <button>4. parenthesis</button>
     </div>
-    <div class="questionContainer" data-state="hidden">
+    <div class="questionContainer" id="questionFive" data-state="hidden">
       <h2>Very useful tools in development and debugging for printing content to the debugger is:</h2>
       <button>1. JavaScript</button>
       <button>2. terminal/bash</button>
       <button>3. for loops</button>
       <button>4. console log</button>
     </div>
-    <div class="questionContainer" data-state="hidden">
+    <div class="questionContainer" id="score" data-state="hidden">
       <h2>All Done!</h2>
       <p>Your final score is: </p>
       <p>Enter your initials:</p><input type="text" />
       <button>Submit</button>
     </div>
-    <div class="questionContainer" data-state="hidden">
+    <div class="questionContainer" id="clearScore" data-state="hidden">
       <h2>High Scores</h2>
       <input type="text" />
       <button>Go Back</button>
       <button>Clear High Scores</button>
     </div>
-    <div class="questionContainer" data-state="hidden">
+    <div class="questionContainer" id="clearAllScores" data-state="hidden">
       <h2>High Scores</h2>
       <button>Go Back</button>
       <button>Clear High Scores</button>
-    </div>
+  </div>
+  
     <script src="./assets/scripts/script.js"></script>
   </body>
   </html>

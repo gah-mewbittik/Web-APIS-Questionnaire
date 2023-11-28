@@ -37,7 +37,16 @@ button{
     margin-right: auto;
     width: 300px;
 }
-
+button:hover{
+    background-color: aqua;
+    color:darkmagenta;
+    
+}
+button:active{
+    background-color: burlywood;
+    color:darkmagenta;
+    border-color: aqua;
+}
 .questionContainer{
     display: flex;
     flex-direction: column;
@@ -45,5 +54,11 @@ button{
     width: 50%;
     margin: auto;
     text-align: center;
+}
+
+
+
+.hidden{
+    display: none;
 }
 
