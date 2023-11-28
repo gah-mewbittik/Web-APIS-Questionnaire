@@ -6,6 +6,7 @@ var buttonEl = document.getElementById('start-quiz');
 
 
 
+
 var downTick = 75;
 
 var message = 'YOUR TIME IS UP!'
@@ -57,20 +58,21 @@ function countdown() {
   var element = event.target;
 
   countdown();
+  
 
   if(element.matches('.questionContainer')){
-    
-    if(qContainEl.dataset.state === 'hidden'){
-      qContainEl.dataset.state = 'visible';
-      qContainEl.style.display = 'block';
-    }else{
-      qContainEl.dataset.state = 'hidden';
-      qContainEl.style.display = 'none';
-    }
- }
+       if(element.dataset.state === 'hidden'){
+         element.dataset.state = 'visible';
+         }else{
+           element.dataset.state = 'hidden';
+         }
+       
+      }
   
 
  });
+
+ 
 
 //  var container = document.querySelector(".container");
 
