@@ -239,28 +239,35 @@ qFiveButton_4El.addEventListener('click', function(){
 scoreSubmit.addEventListener('click', function(){
   score.remove();
   clearScore.style.display = 'flex';
+  document.body.append(clearScore);
 });
 
 goBackBtn.addEventListener('click', function(){
   clearScore.remove();
-  score.show(); ///fix this -----------------------------------<<<
+  document.body.appendChild(score); 
+  score.style.display = 'flex';
+  
 });
 
 clearHighScoreBtn.addEventListener('click', function(){
   clearScore.remove();
+  document.body.appendChild(clearAllScores);
   clearAllScores.style.display = 'flex';
 });
 
 goBackBtn_2.addEventListener('click', function(){
   clearAllScores.remove();
-  clearScore.append(); ///fix this -------------------------------<<<
+  document.body.append(clearScore); 
+  clearScore.style.display = 'flex';
 });
 
 clearAllHighScoresBtn.addEventListener('click', function(){
   
   //Add clearing of scores and save to local storage
   clearAllScores.remove();
-})
+
+  mainEl.textContent = 'Thank you for your participation!'
+});
 
 
 
