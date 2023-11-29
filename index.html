@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
+    <!-- High score and Timer -->
     <div class="info-container">
       <div id="high-score">View High Scores</div>
       <div id="timer">Timer: <span id="timerCount"></span></div>
       
     </div>
+    <!-- Main for msgs -->
     <div id="main"></div>
+    <!--Start Quiz start-->
     <div class="questionContainer" id="initialQuestion" data-state="visible">
       <h2>Coding Quiz Challenge</h2>
       <p>Try answer the following questions before the timer runs out. Keep in mind that incorrect answers will penalize your scoreline by ten seconds. </p>
       <button id="start-quiz">Start Quiz</button>
     </div>
+    <!--Start Quiz end-->
+    <!--QUestion 1 start-->
     <div class="questionContainer" id="questionOne" data-state="hidden">
       <h2>Commonly used types DO NOT include:</h2>
       <button id="qOneBtn_1">1. strings</button>
@@ -26,6 +31,8 @@
       <button id="qOneBtn_3">3. alerts</button>
       <button id="qOneBtn_4">4. numbers</button>
     </div>
+    <!--Question 1 end-->
+    <!--Question 2 start-->
     <div class="questionContainer" id="questionTwo" data-state="hidden">
       <h2>The condition in an if/else statement is embedded within __________.</h2>
       <button id="qTwoBtn_1">1. quotes</button>
@@ -33,6 +40,8 @@
       <button id="qTwoBtn_3">3. parenthesis</button>
       <button id="qTwoBtn_4">4. square brackets</button>
     </div>
+    <!--Question 2 end-->
+    <!--Question 3 start-->
     <div class="questionContainer" id="questionThree" data-state="hidden">
       <h2>Arrays in JavaScript can be used to store:</h2>
       <button id="qThreeBtn_1">1. numbers and strings</button>
@@ -40,6 +49,8 @@
       <button id="qThreeBtn_3">3. booleans</button>
       <button id="qThreeBtn_4">4. all the above</button>
     </div>
+    <!--Question 3 end-->
+    <!--Question 4 start-->
     <div class="questionContainer" id="questionFour" data-state="hidden">
       <h2>Strings must be enclosed within _____ when being assigned to variables</h2>
       <button id="qFourBtn_1">1. commas</button>
@@ -47,6 +58,8 @@
       <button id="qFourBtn_3">3. quotes</button>
       <button id="qFourBtn_4">4. parenthesis</button>
     </div>
+    <!--Question 4 end-->
+    <!-- Question 5 start-->
     <div class="questionContainer" id="questionFive" data-state="hidden">
       <h2>Very useful tools in development and debugging for printing content to the debugger is:</h2>
       <button id="qFiveBtn_1">1. JavaScript</button>
@@ -54,21 +67,27 @@
       <button id="qFiveBtn_3">3. for loops</button>
       <button id="qFiveBtn_4">4. console log</button>
     </div>
+    <!--Question 5 end-->
+    <!--final score start-->
     <div class="questionContainer" id="score" data-state="hidden">
       <h2>All Done!</h2>
       <p>Your final score is: </p>
       <p>Enter your initials:</p><input type="text" id="yourInitials" placeholder="(e.g. AB)"/>
       <button id="scoreSubmit">Submit</button>
     </div>
+    <!--final score end-->
+    <!--clear score start-->
     <div class="questionContainer" id="clearScore" data-state="hidden">
       <h2>High Scores</h2>
      <p><span type="text" id="initialsInput"></span></p>
       <button id="goBackBtn">Go Back</button>
       <button id="clearHighScore">Clear High Scores</button>
     </div>
+    <!--clear score end-->
+    <!--Retake Quiz and Clear ALL scores-->
     <div class="questionContainer" id="clearAllScores" data-state="hidden">
       <h2>High Scores</h2>
-      <button id="goBackBtn_2">Re-take Quiz</button>
+      <button id="goBackBtn_2">Retake Quiz</button>
       <button id="clearAllHighScores">Clear High Scores</button>
   </div>
   
