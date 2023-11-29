@@ -54,6 +54,9 @@ var qFiveButton_4El = document.getElementById('qFiveBtn_4');
 //score
 var score = document.getElementById('score');
 
+// Points for correct answers
+var points = 0;
+
 //score button
 var scoreSubmit = document.getElementById('scoreSubmit');
 
@@ -117,7 +120,7 @@ function countdown() {
     }, 1000);
   }
   
-//initial question buttons;
+//initial question buttons "start quiz"
  buttonEl.addEventListener('click', function(){
   
   countdown();
@@ -128,25 +131,26 @@ function countdown() {
   
  });
 
- //First question buttons start
+ //First question buttons start 
+ //strings btn
  qOneButton_1El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
  });
-
+//booleans btn
  qOneButton_2El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
  });
-
+//alerts btn
  qOneButton_3El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
  });
-
+//numbers btn
  qOneButton_4El.addEventListener('click', function(){
   
   questionOne.remove();
@@ -155,21 +159,22 @@ function countdown() {
 //First question buttons end
 
 //Second question buttons
+// quotes btn
 qTwoButton_1El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
 });
-
+//curly brackets btn
 qTwoButton_2El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
 });
-
+//parenthesis btn
 qTwoButton_3El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
 });
-
+//square brackets btn
 qTwoButton_4El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
@@ -177,21 +182,22 @@ qTwoButton_4El.addEventListener('click', function(){
 //Second question buttons end
 
 //Third question buttons start
+//number and string btn
 qThreeButton_1El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
 });
-
+//other array btn
 qThreeButton_2El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
 });
-
+// boolean btn
 qThreeButton_3El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
 });
-
+//all the above btn
 qThreeButton_4El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
@@ -199,18 +205,22 @@ qThreeButton_4El.addEventListener('click', function(){
 //Third question buttons end
 
 //Fourth question buttons start
+//commas btn
 qFourButton_1El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
 });
+//curly brackets btn
 qFourButton_2El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
 });
+//quotes btn
 qFourButton_3El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
 });
+//parenthesis btn
 qFourButton_4El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
@@ -218,21 +228,22 @@ qFourButton_4El.addEventListener('click', function(){
 //Fourth question end
 
 //Fifth question start
+//javaScript btn
 qFiveButton_1El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
 });
-
+//terminal/bash btn
 qFiveButton_2El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
 });
-
+// for loop btn
 qFiveButton_3El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
 });
-
+// consol log btn
 qFiveButton_4El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
