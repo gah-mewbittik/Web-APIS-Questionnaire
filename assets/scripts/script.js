@@ -1,6 +1,7 @@
 var timerEl = document.getElementById('timerCount');
 var mainEl = document.getElementById('main');
 var qContainEl = document.querySelector('.questionContainer');
+var initialQ = document.getElementById('initialQuestion');
 //start-quiz button
 var buttonEl = document.getElementById('start-quiz');
 
@@ -115,12 +116,12 @@ function countdown() {
   
 //initial question buttons;
  buttonEl.addEventListener('click', function(){
-
-  countdown();
   
+  countdown();
   document.getElementById('initialQuestion').remove();
-
   questionOne.style.display = 'flex';
+
+  
   
  });
 
@@ -236,60 +237,38 @@ qFiveButton_4El.addEventListener('click', function(){
 //Fifth question end
 
 //Scores & Clear Scores Buttons start
+//submit button
 scoreSubmit.addEventListener('click', function(){
   score.remove();
   clearScore.style.display = 'flex';
   document.body.append(clearScore);
 });
-
+//go back button
 goBackBtn.addEventListener('click', function(){
   clearScore.remove();
   document.body.appendChild(score); 
   score.style.display = 'flex';
   
 });
-
+//clear high score button
 clearHighScoreBtn.addEventListener('click', function(){
   clearScore.remove();
   document.body.appendChild(clearAllScores);
   clearAllScores.style.display = 'flex';
 });
-
+//go back button two
 goBackBtn_2.addEventListener('click', function(){
   clearAllScores.remove();
-  document.body.append(clearScore); 
-  clearScore.style.display = 'flex';
+  location.reload();
 });
-
+//clear all button
 clearAllHighScoresBtn.addEventListener('click', function(){
   
   //Add clearing of scores and save to local storage
   clearAllScores.remove();
 
   mainEl.textContent = 'Thank you for your participation!'
+
+
 });
 
-
-
-
-
-//  var container = document.querySelector(".container");
-
-//  container.addEventListener("click", function(event) {
-//    var element = event.target;
- 
-//    // TODO: Complete function
-//   if(element.matches('.box')){
-//    if(element.dataset.state === 'hidden'){
-//      var value = element.getAttribute('data-number');
-//      element.textContent = value;
-//      element.dataset.state = 'visible';
-//      }else{
-//        element.textContent = ' ';
-//        element.dataset.state = 'hidden';
-//      }
-   
-//   }
- 
- 
-//  });
