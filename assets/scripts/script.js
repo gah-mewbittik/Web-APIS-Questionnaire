@@ -2,6 +2,9 @@ var timerEl = document.getElementById('timerCount');
 var mainEl = document.getElementById('main');
 var qContainEl = document.querySelector('.questionContainer');
 var initialQ = document.getElementById('initialQuestion');
+
+var yourInitials = document.getElementById('yourInitials');
+
 //start-quiz button
 var buttonEl = document.getElementById('start-quiz');
 
@@ -242,6 +245,7 @@ scoreSubmit.addEventListener('click', function(){
   score.remove();
   clearScore.style.display = 'flex';
   document.body.append(clearScore);
+  document.querySelector("#initialsInput").textContent = yourInitials.value; ///fix
 });
 //go back button
 goBackBtn.addEventListener('click', function(){
