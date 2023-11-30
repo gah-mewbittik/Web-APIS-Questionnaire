@@ -56,6 +56,7 @@ var score = document.getElementById('score');
 
 // Points for correct answers
 var points = 0;
+var enterPoints = document.getElementById('enterPoints');
 
 //score button
 var scoreSubmit = document.getElementById('scoreSubmit');
@@ -132,121 +133,145 @@ function countdown() {
  });
 
  //First question buttons start 
- //strings btn
+ //strings btn (wrong)
  qOneButton_1El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
+  downTick -= 5;
  });
-//booleans btn
+//booleans btn (wrong)
  qOneButton_2El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
+  downTick -= 5;
  });
-//alerts btn
+//alerts btn (correct)
  qOneButton_3El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
+  points++;
  });
-//numbers btn
+//numbers btn (wrong)
  qOneButton_4El.addEventListener('click', function(){
   
   questionOne.remove();
   questionTwo.style.display = 'flex';
+  downTick -= 5;
  });
 //First question buttons end
 
 //Second question buttons
-// quotes btn
+// quotes btn (wrong)
 qTwoButton_1El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
+  downTick -= 5;
 });
-//curly brackets btn
+//curly brackets btn (wrong)
 qTwoButton_2El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
+  downTick -= 5;
 });
-//parenthesis btn
+//parenthesis btn (correct)
 qTwoButton_3El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
+  points++;
 });
-//square brackets btn
+//square brackets btn (wrong)
 qTwoButton_4El.addEventListener('click', function(){
   questionTwo.remove();
   questionThree.style.display = 'flex';
+  downTick -= 5;
 });
 //Second question buttons end
 
 //Third question buttons start
-//number and string btn
+//number and string btn (wrong)
 qThreeButton_1El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
+  downTick -= 5;
 });
-//other array btn
+//other array btn (wrong)
 qThreeButton_2El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
+  downTick -= 5;
 });
-// boolean btn
+// boolean btn (wrong)
 qThreeButton_3El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
+  downTick -= 5;
 });
-//all the above btn
+//all the above btn (correct)
 qThreeButton_4El.addEventListener('click', function(){
   questionThree.remove();
   questionFour.style.display = 'flex';
+  points++;
 });
 //Third question buttons end
 
 //Fourth question buttons start
-//commas btn
+//commas btn (wrong)
 qFourButton_1El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
+  downTick -= 5;
 });
-//curly brackets btn
+//curly brackets btn (wrong)
 qFourButton_2El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
+  downTick -= 5;
 });
-//quotes btn
+//quotes btn (correct)
 qFourButton_3El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
+  points++;
 });
-//parenthesis btn
+//parenthesis btn (wrong)
 qFourButton_4El.addEventListener('click', function(){
   questionFour.remove();
   questionFive.style.display = 'flex';
+  downTick -= 5;
 });
 //Fourth question end
 
 //Fifth question start
-//javaScript btn
+//javaScript btn (wrong)
 qFiveButton_1El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
+  downTick -= 5;
+  enterPoints.textContent = points; // points accumulated
 });
-//terminal/bash btn
+//terminal/bash btn (wrong)
 qFiveButton_2El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
+  downTick -= 5;
+  enterPoints.textContent = points; // points accumulated
 });
-// for loop btn
+// for loop btn (wrong)
 qFiveButton_3El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
+  downTick -= 5;
+  enterPoints.textContent = points; // points accumulated
 });
-// consol log btn
+// console log btn (correct)
 qFiveButton_4El.addEventListener('click', function(){
   questionFive.remove();
   score.style.display = 'flex';
+  points++;
+  enterPoints.textContent = points; // points accumulated
 });
 //Fifth question end
 
@@ -256,7 +281,8 @@ scoreSubmit.addEventListener('click', function(){
   score.remove();
   clearScore.style.display = 'flex';
   document.body.append(clearScore);
-  document.querySelector("#initialsInput").textContent = yourInitials.value; ///fix
+  document.querySelector("#initialsInput").textContent = yourInitials.value + " "+"-"+" "+ points; ///fix
+  
 });
 //go back button
 goBackBtn.addEventListener('click', function(){
