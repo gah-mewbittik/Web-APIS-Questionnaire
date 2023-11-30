@@ -1,11 +1,11 @@
 # Web APIs Questionnaire
 
-## Building a Web API questionnaire
+## Building a Web API Questionnaire
 
 The purpose of this project is to created a a interactive quiz. Developing this project demonstrates our programming skills.
 This project was developed with javascript. It was important that the Web API Questionnaire worked. I learnt that some "trail and error" was necessary.  
 
-The following is an image of the password generator.
+The following is an image of the Web API Questionnaire.
 ![Alt text](./assets/images/Web-APIS-Questionnaire.png) 
 
 
