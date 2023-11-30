@@ -81,6 +81,7 @@ var downTick = 75;
 var message = 'YOUR TIME IS UP!'
 var words = message.split(' ');
 
+//countdown Timer
 function countdown() {
  
     // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
@@ -98,6 +99,7 @@ function countdown() {
       if(downTick === 0){
         clearInterval(timeInterval);
         displayMessage();
+        endQuiz();
       }
       //
     }, 1000);
@@ -120,6 +122,17 @@ function countdown() {
       }
     }, 1000);
   }
+
+  //Removes all questions when timer runs out
+  function endQuiz(){
+      questionOne.remove();
+      questionTwo.remove();
+      questionThree.remove();
+      questionFour.remove();
+      questionFive.remove();
+      score.style.display = 'flex';
+      enterPoints.textContent = points;
+  }
   
 //initial question buttons "start quiz"
  buttonEl.addEventListener('click', function(){
@@ -127,8 +140,6 @@ function countdown() {
   countdown();
   document.getElementById('initialQuestion').remove();
   questionOne.style.display = 'flex';
-
-  
   
  });
 
@@ -277,7 +288,8 @@ qFiveButton_4El.addEventListener('click', function(){
 
 //Scores & Clear Scores Buttons start
 //submit button
-scoreSubmit.addEventListener('click', function(){
+scoreSubmit.addEventListener('click', function(event){
+  
   score.remove();
   clearScore.style.display = 'flex';
   document.body.append(clearScore);
