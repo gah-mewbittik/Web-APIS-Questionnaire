@@ -3,6 +3,7 @@ var mainEl = document.getElementById('main');
 var qContainEl = document.querySelector('.questionContainer');
 var initialQ = document.getElementById('initialQuestion');
 
+//initials input
 var yourInitials = document.getElementById('yourInitials');
 
 //start-quiz button
@@ -329,4 +330,19 @@ clearAllHighScoresBtn.addEventListener('click', function(){
 
 
 });
+
+///// test ///////
+var coll = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "flex") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "flex";
+    }
+  });
+}
 
