@@ -3,6 +3,9 @@ var mainEl = document.getElementById('main');
 var qContainEl = document.querySelector('.questionContainer');
 var initialQ = document.getElementById('initialQuestion');
 
+var theScores = [];
+var highScoreList = document.getElementById('highScoreList');
+
 //initials input
 var yourInitials = document.getElementById('yourInitials');
 
@@ -299,6 +302,11 @@ scoreSubmit.addEventListener('click', function(event){
     clearScore.style.display = 'flex';
     document.body.append(clearScore);
     document.querySelector("#initialsInput").textContent = yourInitials.value + " "+"-"+" "+ points; 
+
+    theScores.push(yourInitials.value + " - " + points);
+    //How to sort list from highest points?--------.sort((a, b) => b - a);
+    storeHighScores();
+    renderHighScores();
   }
 });
 //go back button
@@ -325,13 +333,14 @@ clearAllHighScoresBtn.addEventListener('click', function(){
   
   //Add clearing of scores and save to local storage
   clearAllScores.remove();
-
+  highScoreList.innerHTML = "";
+  localStorage.clear();
   mainEl.textContent = 'Thank you for your participation!'
 
 
 });
 
-///// test ///////
+// collapsing list for High Scores
 var coll = document.getElementsByClassName("collapsible");
 
 for (var i = 0; i < coll.length; i++) {
@@ -346,3 +355,35 @@ for (var i = 0; i < coll.length; i++) {
   });
 }
 
+//High Score list 
+
+function storeHighScores() {
+  localStorage.setItem("theScores", JSON.stringify(theScores));
+  
+}
+
+function renderHighScores() {
+  highScoreList.innerHTML = "";
+  
+  for (var i = 0; i < theScores.length; i++) {
+    var addScore = theScores[i];
+
+    var li = document.createElement("li");
+    li.textContent = addScore;
+    li.setAttribute("data-index", i);
+
+    highScoreList.appendChild(li);
+  }
+}
+
+function init() {
+  
+  var storedHighScores = JSON.parse(localStorage.getItem("theScores"));
+  
+  if (storedHighScores !== null) {
+    theScores = storedHighScores;
+  }
+  renderHighScores();
+}
+
+init();
