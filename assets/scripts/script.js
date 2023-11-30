@@ -304,7 +304,16 @@ scoreSubmit.addEventListener('click', function(event){
     document.querySelector("#initialsInput").textContent = yourInitials.value + " "+"-"+" "+ points; 
 
     theScores.push(yourInitials.value + " - " + points);
-    //How to sort list from highest points?--------.sort((a, b) => b - a);
+    //sort list from highest points
+    theScores.sort(function(a, b) {
+      // get the points from each score
+      var ptsA = parseInt(a.split(" - ")[1]);
+      var ptsB = parseInt(b.split(" - ")[1]);
+
+      // Compare the points 
+      return ptsB - ptsA;
+    });
+
     storeHighScores();
     renderHighScores();
   }
