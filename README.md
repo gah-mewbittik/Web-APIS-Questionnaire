@@ -16,7 +16,7 @@ N/A
 
 ## Usage
 
-To take the quiz, simply click the following link: https://gah-mewbittik.github.io/web-apis-questionnaire/
+To take the quiz, simply click the following link: https://gah-mewbittik.github.io/Web-APIS-Questionnaire/
 From there you will be able view the quiz and simply click the "Start Quiz" button to begin the quiz. Then the first question will display requiring to select one of four choices. After selecting your answer, your move on to the next question. This process repeats until you complete the quiz. Once completing the quiz, your score is calculated
 and are asked to input your initials. 
 
