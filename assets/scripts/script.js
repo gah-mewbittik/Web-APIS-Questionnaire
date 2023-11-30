@@ -140,7 +140,7 @@ function countdown() {
   countdown();
   document.getElementById('initialQuestion').remove();
   questionOne.style.display = 'flex';
-  
+  yourInitials.value  = "";
  });
 
  //First question buttons start 
@@ -283,6 +283,7 @@ qFiveButton_4El.addEventListener('click', function(){
   score.style.display = 'flex';
   points++;
   enterPoints.textContent = points; // points accumulated
+  
 });
 //Fifth question end
 
@@ -301,7 +302,7 @@ goBackBtn.addEventListener('click', function(){
   clearScore.remove();
   document.body.appendChild(score); 
   score.style.display = 'flex';
-  
+  yourInitials.value = "";
 });
 //clear high score button
 clearHighScoreBtn.addEventListener('click', function(){
@@ -313,6 +314,7 @@ clearHighScoreBtn.addEventListener('click', function(){
 goBackBtn_2.addEventListener('click', function(){
   clearAllScores.remove();
   location.reload();
+  
 });
 //clear all button
 clearAllHighScoresBtn.addEventListener('click', function(){
