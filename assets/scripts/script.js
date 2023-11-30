@@ -291,11 +291,14 @@ qFiveButton_4El.addEventListener('click', function(){
 //submit button
 scoreSubmit.addEventListener('click', function(event){
   
-  score.remove();
-  clearScore.style.display = 'flex';
-  document.body.append(clearScore);
-  document.querySelector("#initialsInput").textContent = yourInitials.value + " "+"-"+" "+ points; ///fix
-  
+  if(yourInitials.value === ""){
+    alert("You need to enter your initials.");
+  }else{
+    score.remove();
+    clearScore.style.display = 'flex';
+    document.body.append(clearScore);
+    document.querySelector("#initialsInput").textContent = yourInitials.value + " "+"-"+" "+ points; 
+  }
 });
 //go back button
 goBackBtn.addEventListener('click', function(){
